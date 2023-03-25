@@ -108,9 +108,13 @@ and put this command:
 
 - Create a database with PostgreSQL 
 - This database will be deleted in 90 days, so it`s necessary to create again in 90 days
-- Our app needs do support PostgreSQL and sqlite
+- Copy the db URL that were created
+- Our app needs do support PostgreSQL(production) and sqlite(development)
 - Create a new env variable called DATABASE_CLIENT that will be a enum and set it in src/env
 - Install postgree with `npm install pg`
 - Change in database.ts to get DATABASE_CLIENT value 
 - Inform engines in package.json to set node version compatible with render and the node from this project
-- 
+- Back to Render and when the database is created, back to dashboard and create a new web service
+- Fill the fields with the commands that are used to up the application
+- Click in advance options and set de env variables DATABASE_CLIENT and DATABASE_URL (was generetated when the database was created)
+- See the log the web app deploying
