@@ -1,4 +1,4 @@
-### Init
+# Init
 
 - npm init - y
 - create folder src and file index.ts
@@ -26,14 +26,14 @@ and put this command:
 - Run the command `eslint src --ext .ts --fix` will show all files that needs to be fixed and will fix all files that are easier to be fixed;
 
 
-### Query builder 
+# Query builder 
 
 - Use Knex.js as a query builder and sqlite3 as a driver for DB;
 - See the docs in knexjs.org;
 - Run `npm install knex sqlite3`;
 - Create database.ts to connect with database;
 
-### Migrations
+# Migrations
 
 - Version control of database;
 - It is similar with git, but for database;
@@ -97,3 +97,20 @@ and put this command:
 - Run `node dist/server.js` and see everthing running
 - Create a .eslintignore to ignore the files that are in /dist
 - Put the dist file inside gitignore
+
+# Options of deploy
+
+- render.com ( choosed for this project )
+- fly.io
+- railway.com
+
+# Render (Cloud Service)
+
+- Create a database with PostgreSQL 
+- This database will be deleted in 90 days, so it`s necessary to create again in 90 days
+- Our app needs do support PostgreSQL and sqlite
+- Create a new env variable called DATABASE_CLIENT that will be a enum and set it in src/env
+- Install postgree with `npm install pg`
+- Change in database.ts to get DATABASE_CLIENT value 
+- Inform engines in package.json to set node version compatible with render and the node from this project
+- 
