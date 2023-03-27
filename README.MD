@@ -21,7 +21,7 @@ This project was built with the intention of studying Node.js. For this purpose,
 
 ## General Info
 
-This project was built and configured following the following steps:
+This project was built and configured following these steps:
 
 ### Init Setup 
 
