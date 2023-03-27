@@ -1,30 +1,60 @@
-# Init
+# Node with fastify
 
-- npm init - y
-- create folder src and file index.ts
-- npm i -D typescript
-- create a settings file of typescript using npx
-- npx tsc --init -> generates de tsconfig.json
-- change the target of tsconfig.json to es2020
-- npx tsc src/index.ts -> transform the typescript file into javascript file
-- npm i fastify
-- npm i -D @types/node
-- npm install tsx -D
-- run `npx tsx src/server.ts` will automate the all process to convert the file in js and run the app,
-  but this is not recomendable to use in production enviroment because does't have a good perfomance.
-- npm i eslint @rocketseat/eslint-config -D
-- create a file called .eslintrc.json
+This project was built with the intention of studying Node.js. For this purpose, I created a transaction API using some helper tools such as Fastify. 
+
+# Technologies
+- Node v18.14.0;
+- Fastify(framework to replace express) v4.15.0;
+- Knex(query builder) v2.4.2;
+- Zod(validation library) v3.21.4;
+- Vitest(tests) v0.29.7;
+- sqlite3(dev) v5.1.6 and PostgreSQL(prod) v8.10.0;
+- tsup(to convert ts in js) v6.7.0;
+- Typescript v5.0.2;
+
+# Launch
+- To launch this project run the script `tsx watch src/server.ts` or run `npm run dev`;
+- The API is online in this link: https://node-with-fastify.onrender.com
+
+## Table of contents
+* [General Info](#general-info)
+
+## General Info
+
+This project was built and configured following the following steps:
+
+### Init Setup 
+
+- `npm init -y`
+    - This will init your project with a package.json;
+    - Create a folder src and inside this folder, create a file called server.ts;
+
+### Typescript Setup
+
+- `npm i -D typescript`
+    - Install the typescript as a dev dependency(typescript is just use in prod);
+    - Run `npx tsc --init` to generate a tsconfig.json;
+    - Change the target of this file to es2020(to get the new features of ecmaScript);
+    - Run `npm i -D @types/node` to provides type definitions for Node.js in TypeScript. This allows TypeScript developers to write code for Node.js with more accurate autocomplete and type checking in their code editors;
+    - Run `npm i tsx -D` to install a CLI command (alternative to node) for seamlessly running TypeScript;
+    - So, the script `npx tsx src/server.ts` will automate the all process to convert the file ts in js and run the app;
+    - Update the script above to `npx tsx watch src/server.ts` to node update the server when something in the code changes;
+### Fastify Setup
+
+- `npm i fastify`
+    - This script will install the fastify;
+
+### ESLint Setup
+
+- Run `npm i eslint @rocketseat/eslint-config -D` to get the eslint config of rocketseat;
 - To automate the formatting texts with eslint, go to command pallet and search for Open Workspace Settings(JSON)
 and put this command: 
-
-"editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-}
-
-- Besides that, go to preferences->settings and uncheck the Editor: Format On Save
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    };
+- Besides that, go to preferences -> settings and uncheck the Editor: Format On Save;
 - Run the command `eslint src --ext .ts` to see all files that needs to be fixed;
 - Run the command `eslint src --ext .ts --fix` will show all files that needs to be fixed and will fix all files that are easier to be fixed;
-
 
 # Query builder 
 
