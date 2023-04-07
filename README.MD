@@ -38,7 +38,7 @@ This project was built and configured following these steps:
     - Run `npm i -D @types/node` to provides type definitions for Node.js in TypeScript. This allows TypeScript developers to write code for Node.js with more accurate autocomplete and type checking in their code editors;
     - Run `npm i tsx -D` to install a CLI command (alternative to node) for seamlessly running TypeScript;
     - So, the script `npx tsx src/server.ts` will automate the all process to convert the file ts in js and run the app;
-    - Update the script above to `npx tsx watch src/server.ts` to node update the server when something in the code changes;
+    - Update the script above to `tsx watch src/server.ts` to node update the server when something in the code changes;
 ### Fastify Setup
 
 - `npm i fastify`
@@ -47,6 +47,7 @@ This project was built and configured following these steps:
 ### ESLint Setup
 
 - Run `npm i eslint @rocketseat/eslint-config -D` to get the eslint config of rocketseat;
+- Create a .eslintrc.json to setup the extends of eslint-config installed;
 - To automate the formatting texts with eslint, go to command pallet and search for Open Workspace Settings(JSON)
 and put this command: 
     "editor.codeActionsOnSave": {
